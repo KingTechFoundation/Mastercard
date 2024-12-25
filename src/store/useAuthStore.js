@@ -4,9 +4,9 @@ import toast from 'react-hot-toast';
 import { io } from 'socket.io-client';
 
 const BASE_URL =
-  import.meta.env.MODE === 'development'
-    ? 'http://localhost:5000'
-    : 'https://mater-card-backend.onrender.com/api';
+  import.meta.env.MODE === 'production'
+    ? 'https://mater-card-backend.onrender.com'
+    : '/';
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
